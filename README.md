@@ -20,7 +20,7 @@
 
 ## 서비스 목록 관리
 
-홈페이지는 공개 운영이 확인된 제품을 카드로 소개합니다. 제품별 설명, 주요 기능, 이용 링크와 주의사항은 `site/index.html`에서 관리합니다. 개인용 프로젝트나 프로토타입은 공개 승인을 확인한 뒤 추가하며, 개인 기록·내부 서버 정보·실제 사용자 데이터는 포함하지 않습니다.
+홈페이지는 공개 소개가 승인된 7개 제품을 카드로 소개합니다. 운영 중인 서비스는 이용 링크를 제공하고, 개발·베타·프로토타입은 현재 상태를 표시합니다. 제품별 설명, 주요 기능, 이용 링크와 주의사항은 `site/index.html`에서 관리합니다. 현재 소개 범위는 출생증명서 번역, AB Care Map, Drive in Alberta, CaLog, BabyLog, ChutChut, 포근입니다. 앱/API 및 포근 ML은 해당 제품에 묶어 소개합니다. 추가 제품은 공개 승인을 확인한 뒤 추가하며, 개인 기록·내부 서버 정보·실제 사용자 데이터는 포함하지 않습니다.
 
 ## 로컬 확인
 
@@ -31,6 +31,8 @@ python3 -m http.server 5190 --directory site
 http://127.0.0.1:5190/ 에서 확인합니다. 홈페이지에는 공식 AdSense 스크립트가 있으므로 자동 브라우저 검증 시 `pagead2.googlesyndication.com` 요청을 차단하세요. 실제 광고를 클릭하거나 노출을 반복해서 만들지 않습니다.
 
 ## 배포와 도메인
+
+현재 DNS 상태와 단계별 연결 방법은 [도메인 연결 안내](docs/domain-setup.md)를 참고하세요.
 
 `main`에 푸시하면 GitHub Actions가 GitHub Pages로 배포합니다. 저장소 Settings → Pages의 Source는 GitHub Actions, Custom domain은 `mydy.kr`로 설정합니다.
 
