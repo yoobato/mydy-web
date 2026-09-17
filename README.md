@@ -3,7 +3,7 @@
 일상에 필요한 작은 서비스를 소개하는 MYDY 홈페이지입니다.
 
 - 대표 주소: https://mydy.kr/
-- 공개 서비스: [알버타 출생증명서 한글 번역문 생성](https://ab-birthcert-ko.mydy.kr/)
+- 공개 서비스: [알버타 출생증명서 한글 번역문 생성](https://ab-birthcert-ko.mydy.kr/), [AB Care Map](https://abcaremap.mydy.kr/)
 - 운영자: [Daeyeol Ryu](https://yoobato.com)
 
 ## 구성
@@ -17,6 +17,10 @@
 | `site/privacy.html` | 개인정보 및 광고 안내 |
 | `site/ads.txt` | Google 광고 판매자 정보 |
 | `site/robots.txt`, `site/sitemap.xml` | 검색엔진 안내 |
+
+## 서비스 목록 관리
+
+홈페이지는 공개 운영이 확인된 제품을 카드로 소개합니다. 제품별 설명, 주요 기능, 이용 링크와 주의사항은 `site/index.html`에서 관리합니다. 개인용 프로젝트나 프로토타입은 공개 승인을 확인한 뒤 추가하며, 개인 기록·내부 서버 정보·실제 사용자 데이터는 포함하지 않습니다.
 
 ## 로컬 확인
 
