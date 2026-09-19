@@ -1,10 +1,10 @@
 # MYDY
 
-일상에 필요한 작은 서비스를 소개하는 MYDY 홈페이지입니다.
+민영(Minyoung Ha)과 대열(Daeyeol Ryu)이 함께 만드는 사이드 프로젝트를 모아 둔 개인 홈페이지입니다. 종이 노트, 직접 그린 SVG, 부드러운 색을 사용하고 두 사람의 생활과 제작 동기를 중심으로 소개합니다.
 
 - 대표 주소: https://mydy.kr/
 - 공개 서비스: [알버타 출생증명서 한글 번역문 생성](https://ab-birthcert-ko.mydy.kr/), [AB Care Map](https://abcaremap.mydy.kr/)
-- 운영자: [Daeyeol Ryu](https://yoobato.com)
+- 만든 사람: Minyoung Ha · [Daeyeol Ryu](https://yoobato.com)
 
 ## 구성
 
@@ -12,7 +12,7 @@
 
 | 파일 | 역할 |
 | --- | --- |
-| `site/index.html` | 소개, 서비스 목록, 운영자 안내, AdSense 연결 코드 |
+| `site/index.html` | 소개, 프로젝트 모음, 만든 사람 안내, AdSense 연결 코드 |
 | `site/style.css`, `site/mark.svg` | 반응형 디자인과 로고 |
 | `site/privacy.html` | 개인정보 및 광고 안내 |
 | `site/ads.txt` | Google 광고 판매자 정보 |
@@ -20,7 +20,7 @@
 
 ## 서비스 목록 관리
 
-홈페이지는 공개 소개가 승인된 7개 제품을 카드로 소개합니다. 운영 중인 서비스는 이용 링크를 제공하고, 개발·베타·프로토타입은 현재 상태를 표시합니다. 제품별 설명, 주요 기능, 이용 링크와 주의사항은 `site/index.html`에서 관리합니다. 현재 소개 범위는 출생증명서 번역, AB Care Map, Drive in Alberta, CaLog, BabyLog, ChutChut, 포근입니다. 앱/API 및 포근 ML은 해당 제품에 묶어 소개합니다. 추가 제품은 공개 승인을 확인한 뒤 추가하며, 개인 기록·내부 서버 정보·실제 사용자 데이터는 포함하지 않습니다.
+홈페이지는 공개 소개가 승인된 8개 프로젝트을 카드로 소개합니다. 운영 중인 서비스는 이용 링크를 제공하고, 개발·베타·프로토타입은 현재 상태를 표시합니다. 프로젝트별 설명, 이용 상태, 링크와 주의사항은 `site/index.html`에서 관리합니다. 현재 소개 범위는 우리의 청첩장, 출생증명서 번역, AB Care Map, Drive in Alberta, CaLog, BabyLog, ChutChut, 포근입니다. 앱/API 및 포근 ML은 해당 제품에 묶어 소개합니다. 추가 제품은 공개 승인을 확인한 뒤 추가하며, 개인 기록·내부 서버 정보·실제 사용자 데이터는 포함하지 않습니다.
 
 ## 로컬 확인
 
