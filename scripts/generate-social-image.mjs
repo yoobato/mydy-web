@@ -4,6 +4,7 @@ import { readFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 const { chromium } = await import(process.env.MYDY_PLAYWRIGHT_MODULE || 'playwright');
 const site = new URL('../site/', import.meta.url);
+const english = process.argv.includes('--en');
 const homepage = await readFile(new URL('index.html', site), 'utf8');
 const drawing = homepage.match(/<div class="doodle">(<svg[\s\S]*?<\/svg>)<\/div>/)?.[1];
 if (!drawing) throw new Error('The family illustration was not found.');
@@ -11,7 +12,7 @@ const browser = await chromium.launch({ headless: true });
 try {
   const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
   await page.route(/^https?:/, route => route.abort());
-  await page.setContent(`<!doctype html><html lang="ko"><meta charset="utf-8"><style>
+  let html = `<!doctype html><html lang="ko"><meta charset="utf-8"><style>
     *{box-sizing:border-box}body{margin:0;background:#faf7f0;color:#393a33;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}
     .frame{width:1200px;height:630px;position:relative;padding:49px 66px;overflow:hidden}
     header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ddd7c9;padding-bottom:24px}
@@ -31,10 +32,25 @@ try {
   </style><div class="frame"><header><div class="logo">mydy<span>✳</span></div><span class="url">mydy.kr</span></header>
   <div class="copy"><p class="eyebrow">우리 가족의 작은 작업실</p><h1>함께 살며,<br><span>이것저것</span> 만듭니다.</h1><p class="description">필요해서 만들고, 재미있어서 해보는 것들.<br>우리 일상에서 시작된 사이드 프로젝트.</p></div>
   <div class="back"></div><div class="note"><span class="tape"></span><p class="label">A LITTLE BIT OF US</p>${drawing}<p class="note-title">우리에게 필요한 것,<br>우리 손으로 하나씩.</p><p class="names">민영 · 대열 · 백호</p></div><div class="sticker">made<br>together ♡</div>
-  <footer><span>완성한 것도, 아직 만들어 가는 것도.</span><span>OUR FAMILY, OUR PROJECTS</span></footer></div></html>`);
+  <footer><span>완성한 것도, 아직 만들어 가는 것도.</span><span>OUR FAMILY, OUR PROJECTS</span></footer></div></html>`;
+  if (english) {
+    const translations = [
+      ['lang="ko"', 'lang="en"'],
+      ['우리 가족의 작은 작업실', 'Our little family workshop'],
+      ['함께 살며,<br><span>이것저것</span> 만듭니다.', 'Making <span>little things,</span><br>as we go.'],
+      ['필요해서 만들고, 재미있어서 해보는 것들.<br>우리 일상에서 시작된 사이드 프로젝트.', 'Things we need. Ideas we enjoy.<br>Side projects from our everyday life.'],
+      ['우리에게 필요한 것,<br>우리 손으로 하나씩.', 'Little things we need,<br>made with our own hands.'],
+      ['민영 · 대열 · 백호', 'Minyoung · Daeyeol · Baekho'],
+      ['완성한 것도, 아직 만들어 가는 것도.', 'Some finished. Some still taking shape.'],
+      ['mydy.kr</span>', 'mydy.kr/en/</span>'],
+    ];
+    for (const [from, to] of translations) html = html.replace(from, to);
+    html = html.replace('</style>', 'h1{font-size:54px;letter-spacing:-2px}.names{font-size:14px;letter-spacing:0}.note-title{font-size:20px}</style>');
+  }
+  await page.setContent(html);
   await page.evaluate(() => document.fonts.ready);
   await mkdir(site, { recursive: true });
-  const output = fileURLToPath(new URL('og-image.png', site));
+  const output = fileURLToPath(new URL(english ? 'og-image-en.png' : 'og-image.png', site));
   await page.screenshot({ path: output, type: 'png' });
   console.log(`Created ${output} (1200 × 630)`);
 } finally {
