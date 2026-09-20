@@ -14,6 +14,8 @@
 | --- | --- |
 | `site/index.html` | 소개, 프로젝트 모음, 만든 사람 안내, AdSense 연결 코드 |
 | `site/style.css`, `site/mark.svg` | 반응형 디자인과 로고 |
+| `site/og-image.png` | 링크 공유용 1200 × 630 PNG 썸네일 |
+| `scripts/generate-social-image.mjs` | 홈페이지 가족 그림을 재사용하는 공유 이미지 생성 도구 |
 | `site/privacy.html` | 개인정보 및 광고 안내 |
 | `site/ads.txt` | Google 광고 판매자 정보 |
 | `site/robots.txt`, `site/sitemap.xml` | 검색엔진 안내 |
@@ -58,3 +60,15 @@ http://127.0.0.1:5190/ 에서 확인합니다. 홈페이지에는 공식 AdSense
 AI의 도움을 받아 디자인·코드·문서를 작성했습니다. 클라이언트 라이브러리와 외부 글꼴을 번들로 배포하지 않으며 시스템 글꼴과 프로젝트용 SVG를 사용합니다. Google AdSense는 Google의 외부 서비스입니다.
 
 © Daeyeol Ryu. All rights reserved. 프로젝트 자체에는 별도의 오픈소스 라이선스를 부여하지 않았습니다.
+
+## 링크 공유 이미지
+
+홈페이지의 Open Graph 및 Twitter 카드 메타데이터에 `https://mydy.kr/og-image.png`를 지정합니다. PNG는 저장소에 포함하므로 배포 시 빌드가 필요하지 않습니다. 화면의 가족 그림과 동일한 SVG를 사용하며 외부 이미지·글꼴을 요청하지 않습니다.
+
+이미지를 수정하려면 Playwright가 설치된 환경에서 아래 도구를 실행합니다. 다른 프로젝트의 설치를 재사용할 때는 `MYDY_PLAYWRIGHT_MODULE`에 해당 `playwright/index.mjs`의 절대 경로를 지정할 수 있습니다.
+
+```sh
+node scripts/generate-social-image.mjs
+```
+
+카카오톡 등 공유 서비스가 예전 미리보기를 캐시했다면 즉시 갱신되지 않을 수 있습니다. 이미지 교체 시에는 이미지 URL 버전도 변경하고, 해당 플랫폼의 공유 캐시 갱신 도구를 사용합니다.
