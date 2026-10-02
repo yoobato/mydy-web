@@ -3,7 +3,7 @@
 민영(Minyoung Ha), 대열(Daeyeol Ryu), 아들 백호(Baekho Ryu)의 일상에서 시작된 사이드 프로젝트를 모아 둔 가족의 개인 홈페이지입니다. 프로젝트 제작자는 민영과 대열입니다. 종이 노트, 직접 그린 SVG, 부드러운 색을 사용하고 가족의 생활과 제작 동기를 중심으로 소개합니다.
 
 - 대표 주소: https://mydy.kr/
-- 공개 서비스: [알버타 출생증명서 한글 번역문 생성](https://ab-birthcert-ko.mydy.kr/), [AB Care Map](https://abcaremap.mydy.kr/)
+- 공개 서비스: [알버타 출생증명서 한글 번역문 생성](https://ab-birthcert-ko.mydy.kr/), [AB Care Map](https://abcaremap.mydy.kr/), [KoreaVancouverBot](https://t.me/korea_vancouver)
 - 만든 사람: Minyoung Ha · [Daeyeol Ryu](https://yoobato.com)
 
 ## 구성
@@ -22,7 +22,7 @@
 
 ## 서비스 목록 관리
 
-홈페이지는 공개 소개가 승인된 8개 프로젝트를 카드로 소개합니다. 운영 중인 서비스는 이용 링크를 제공하고, 개발·베타·프로토타입은 현재 상태를 표시합니다. 프로젝트별 설명, 이용 상태, 링크와 주의사항은 `site/index.html`에서 관리합니다. 현재 소개 범위는 우리의 청첩장, 출생증명서 번역, AB Care Map, Drive in Alberta, CaLog, BabyLog, ChutChut, PogeunStory입니다. 앱/API는 해당 제품에 묶어 소개합니다. PogeunStory는 `products/pogeun-story`의 가족 목소리 그림 동화 프로젝트이며, 비공개 가족 전용으로 소개합니다. 추가 제품은 공개 승인을 확인한 뒤 추가하며, 개인 기록·내부 서버 정보·실제 사용자 데이터는 포함하지 않습니다.
+홈페이지는 공개 소개가 승인된 9개 프로젝트를 카드로 소개합니다. 운영 중인 서비스는 이용 링크를 제공하고, 개발·베타·프로토타입은 현재 상태를 표시합니다. 프로젝트별 설명, 이용 상태, 링크와 주의사항은 `site/index.html`에서 관리합니다. 현재 소개 범위는 우리의 청첩장, 출생증명서 번역, AB Care Map, Drive in Alberta, CaLog, BabyLog, ChutChut, PogeunStory, KoreaVancouverBot입니다. KoreaVancouverBot은 총영사관 게시판 4개를 매시간 확인하는 비공식 알림 채널이며 텔레그램 구독 링크를 제공합니다. 앱/API는 해당 제품에 묶어 소개합니다. PogeunStory는 `products/pogeun-story`의 가족 목소리 그림 동화 프로젝트이며, 비공개 가족 전용으로 소개합니다. 추가 제품은 공개 승인을 확인한 뒤 추가하며, 개인 기록·내부 서버 정보·실제 사용자 데이터는 포함하지 않습니다.
 
 ## 로컬 확인
 
