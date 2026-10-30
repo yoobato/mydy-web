@@ -3,7 +3,7 @@
 민영(Minyoung Ha), 대열(Daeyeol Ryu), 아들 백호(Baekho Ryu)의 일상에서 시작된 사이드 프로젝트를 모아 둔 가족의 개인 홈페이지입니다. 프로젝트 제작자는 민영과 대열입니다. 종이 노트, 직접 그린 SVG, 부드러운 색을 사용하고 가족의 생활과 제작 동기를 중심으로 소개합니다.
 
 - 대표 주소: https://mydy.kr/
-- 공개 서비스: [알버타 출생증명서 한글 번역문 생성](https://ab-birthcert-ko.mydy.kr/), [AB Care Map](https://abcaremap.mydy.kr/), [KoreaVancouverBot](https://korvanbot.mydy.kr/)
+- 공개 서비스: [BC·알버타 출생증명서 한글 번역문 생성](https://canada-birthcert-ko.mydy.kr/), [AB Care Map](https://abcaremap.mydy.kr/), [KoreaVancouverBot](https://korvanbot.mydy.kr/)
 - 만든 사람: Minyoung Ha · [Daeyeol Ryu](https://yoobato.com)
 
 ## 구성
