@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mydy.kr/en/guides/</loc></url>
-  <url><loc>https://mydy.kr/en/guides/read-care-map.html</loc></url>
-  <url><loc>https://mydy.kr/en/guides/subscribe-consulate-alerts.html</loc></url>
-  <url><loc>https://mydy.kr/en/guides/translate-birth-certificate.html</loc></url>
-  <url><loc>https://mydy.kr/en/</loc></url>
-  <url><loc>https://mydy.kr/en/privacy.html</loc></url>
-  <url><loc>https://mydy.kr/en/services/babylog.html</loc></url>
-  <url><loc>https://mydy.kr/en/services/birth-certificate.html</loc></url>
-  <url><loc>https://mydy.kr/en/services/calog.html</loc></url>
-  <url><loc>https://mydy.kr/en/services/care-map.html</loc></url>
-  <url><loc>https://mydy.kr/en/services/consulate-alerts.html</loc></url>
-  <url><loc>https://mydy.kr/guides/</loc></url>
-  <url><loc>https://mydy.kr/guides/read-care-map.html</loc></url>
-  <url><loc>https://mydy.kr/guides/subscribe-consulate-alerts.html</loc></url>
-  <url><loc>https://mydy.kr/guides/translate-birth-certificate.html</loc></url>
   <url><loc>https://mydy.kr/</loc></url>
+  <url><loc>https://mydy.kr/en/</loc></url>
   <url><loc>https://mydy.kr/privacy.html</loc></url>
-  <url><loc>https://mydy.kr/services/babylog.html</loc></url>
-  <url><loc>https://mydy.kr/services/birth-certificate.html</loc></url>
-  <url><loc>https://mydy.kr/services/calog.html</loc></url>
-  <url><loc>https://mydy.kr/services/care-map.html</loc></url>
-  <url><loc>https://mydy.kr/services/consulate-alerts.html</loc></url>
+  <url><loc>https://mydy.kr/en/privacy.html</loc></url>
 </urlset>

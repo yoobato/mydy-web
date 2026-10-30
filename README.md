@@ -16,8 +16,6 @@
 | `site/style.css`, `site/mark.svg` | 반응형 디자인과 로고 |
 | `site/og-image.png` | 링크 공유용 1200 × 630 PNG 썸네일 |
 | `scripts/generate-social-image.mjs` | 홈페이지 가족 그림을 재사용하는 공유 이미지 생성 도구 |
-| `site/services/*.html`, `site/en/services/*.html` | 공개 서비스 3개 및 접근 제한 프로젝트 2개의 한·영 상세 소개 |
-| `site/guides/`, `site/en/guides/` | 가이드 목록과 번역·지도·알림 사용 가이드 |
 | `site/privacy.html` | 개인정보 및 광고 안내 |
 | `site/ads.txt` | Google 광고 판매자 정보 |
 | `site/robots.txt`, `site/sitemap.xml` | 검색엔진 안내 |
@@ -84,23 +82,3 @@ node scripts/generate-social-image.mjs
 - 영어 설명은 홈페이지 소개의 번역이며, 연결된 프로젝트의 언어나 접근 권한을 변경하지 않습니다.
 - 각 페이지의 `lang`, canonical, `hreflang` 및 사이트맵을 함께 유지합니다. 내용 변경 시 한국어와 영어 페이지 모두 업데이트합니다.
 - 영어 공유 이미지는 `node scripts/generate-social-image.mjs --en`으로 생성하며 `site/og-image-en.png`에 저장합니다. 한국어 이미지는 기존 명령을 사용합니다.
-
-## 서비스 상세 소개와 사용 가이드
-
-공개 서비스인 출생증명서 번역, AB Care Map, KoreaVancouverBot에 상세 소개와 단계별 사용 가이드를 제공합니다. CaLog·BabyLog는 접근 제한을 명확히 안내하며 공개 회원가입이나 비공개 기능을 약속하지 않습니다. 기존 카드에서 상세 소개와 서비스 실행 링크를 구분하고, 홈페이지 가이드 섹션과 상단 메뉴에서 내부 문서를 찾을 수 있습니다.
-
-새 페이지는 정적 HTML이며 별도 빌드 없이 배포합니다. 한국어와 영어를 같은 경로 구조로 유지하고 언어 전환은 대응 페이지로 연결합니다. 수정할 때 두 언어의 본문, 설명 메타데이터, canonical·hreflang, 사이트맵을 함께 확인합니다. 가이드의 작성·검토 주체와 갱신일을 표시하며 날짜는 실제 내용 검토 후 갱신합니다.
-
-출생증명서 가이드는 현재 공개된 알버타 버전만 설명합니다. 로컬 개발 중인 BC 지원을 배포된 기능으로 소개하지 않습니다. 지도는 진단·진료 추천이 아닌 화면 사용법을 설명하며 데모·스냅샷·오래된 값과 최신 값을 구분하도록 안내합니다. 영사관 알림은 원문 발췌이며 이미지·첨부파일의 자동 해석이나 기존 글 수정 재알림을 약속하지 않습니다.
-
-승인을 위한 글 수·분량 기준을 만들지 않습니다. 개인정보 없는 실제 사용 설명과 명확한 탐색을 보완하지만, 콘텐츠 추가나 코드 배포가 AdSense 승인을 보장하지는 않습니다. 심사 요청은 AdSense 계정에서 운영자가 별도로 진행합니다.
-
-### 콘텐츠 검증
-
-```sh
-python3 scripts/check-site.py
-# 로컬 정적 서버 실행 후, 설치된 Playwright를 사용
-MYDY_PLAYWRIGHT_MODULE=/absolute/path/to/playwright/index.mjs node scripts/check-browser.mjs
-```
-
-정적 검사는 모든 HTML의 내부 링크·목차 앵커·H1·canonical·양 언어 경로·사이트맵을 확인하며 배포 워크플로에서도 실행합니다. 브라우저 검사는 1440·768·390·320px의 가로 넘침, JavaScript 없는 본문 표시, 메뉴·언어 전환을 확인합니다. 외부 요청을 모두 차단해 광고 노출·클릭을 만들지 않습니다. 화면 검토용 이미지는 Git에서 제외되는 `tmp/`에 저장합니다.
